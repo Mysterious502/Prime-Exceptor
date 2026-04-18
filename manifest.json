@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Prime Exceptor",
+  "version": "1.0.0",
+  "description": "Bypass AI restrictions and get full answers from any AI platform",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "webNavigation"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "ai_sites.js",
+        "prompt_engine.js",
+        "injector.js",
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injector.js",
+        "prompt_engine.js",
+        "ai_sites.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
