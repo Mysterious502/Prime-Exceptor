@@ -26,6 +26,3 @@ For the latest news, updates, and documentation, please visit our official websi
 1.  **Download or clone** this:
     ```bash
     git clone https://github.com/Mysterious502/Prime-Exceptor.git
-    
-    
-    
