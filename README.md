@@ -27,5 +27,5 @@ For the latest news, updates, and documentation, please visit our official websi
     ```bash
     git clone https://github.com/Mysterious502/Prime-Exceptor.git
     
-    ```bash
-    https://prime-exceptor.netlify.app/
+    
+    
